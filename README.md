@@ -2,6 +2,18 @@
 
 Trained on dataset https://www.kaggle.com/alxmamaev/flowers-recognition using [Fastai2](https://github.com/fastai/fastai2)
 
+# GCP
+To deploy it on gcp run, first build
+```
+gcloud builds submit --tag gcr.io/<PROJECT_ID>/flower_classifier
+```
+
+then deploy
+```
+gcloud run deploy flowerclassifier  --image gcr.io/<PROJECT_ID>/flower_classifier --platform managed --memor
+y 512Mi
+```
+
 
 
 # Docker
